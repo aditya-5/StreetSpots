@@ -81,6 +81,8 @@
       div {text-align: center;}
       </style>
 
+      
+
       <h3>Why Support Your Local Street Vendors?</h3>
       <p>Street vending enlivens urban public spaces and increases public safety by making streets vibrant and welcoming, Promoting street vending can generate employment, keep people safe and create the vitality and comity that is the hallmark of livable humane cities.
       </p>
