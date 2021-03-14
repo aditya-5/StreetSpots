@@ -7,14 +7,14 @@ html{
 }
 
 
-  
+
   body {
     padding: 0;
     margin: 0;
     background-color: burlywood;
     margin:0;
   }
-  
+
   .navbar {
     display: flex;
     position: relative;
@@ -131,7 +131,7 @@ h1{
 }
 h2{
     padding-top: 5px;
-    
+
 }
 p{
     font-size: 16;
@@ -142,7 +142,7 @@ p{
     background-color:  burlywood;
     width: 500px;
     margin:auto;
-    
+
 }
 
 .site-footer
