@@ -1,11 +1,11 @@
 <?php
 
-// session_start();
+session_start();
 
-// if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']==false){
-// 	header("location: ./login/login.php");
-// 	exit();
-// }
+if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']==false){
+	header("location: ./login/login.php");
+	exit();
+}
 
  ?>
 
@@ -77,11 +77,13 @@
  			</div>
  		</form>
 
-
  	</div>
 
 
 
+    <h1>   </h1>
+    <h1>FOLLOW COVID-19 CDC GUIDELINES</h1>
+    <h2>Wear a mask and maintain 6 FT from others!</h2>
 
 
 

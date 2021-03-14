@@ -20,6 +20,9 @@ html{
     box-sizing: border-box;
 }
 
+.colorr{
+  background: black !important;
+}
 
 
   body {
