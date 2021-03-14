@@ -1,24 +1,24 @@
 
-*****************  StreetSpots Team *****************\n
+*****************  StreetSpots Team *****************<br />
 
-Jorge - University of California Merced\n
-Aditya - University of Manchester\n
-Javier - University of California Merced\n
+Jorge - University of California Merced<br />
+Aditya - University of Manchester<br />
+Javier - University of California Merced<br />
 
-Copyright © 2021 All Rights Reserved by the Developers.\n
+Copyright © 2021 All Rights Reserved by the Developers.<br />
 
-*****************  Assets  *****************\n
+*****************  Assets  *****************<br />
 
 Slides on Homepage-
-pch.vector from Freepik.com\n
-upklyak from Freepik.com\n
-freepik from Freepik.com\n
-upklyak from Freepik.com\n
+pch.vector from Freepik.com<br />
+upklyak from Freepik.com<br />
+freepik from Freepik.com<br />
+upklyak from Freepik.com<br />
 
-*****************  Technologies  *****************\n
+*****************  Technologies  *****************<br />
 
-PHP (Backend)\n
-HTML+CSS+BootStrap+JavaScript+jQuery (FrontEnd)\n
-mySQL (Database)\n
-Google Maps API and HTML Geocoding API (APIs)\n
-FontAwesome icons\n
+PHP (Backend)<br />
+HTML+CSS+BootStrap+JavaScript+jQuery (FrontEnd)<br />
+mySQL (Database)<br />
+Google Maps API and HTML Geocoding API (APIs)<br />
+FontAwesome icons<br />
