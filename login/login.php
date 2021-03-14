@@ -90,7 +90,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
  </head>
  <body>
 	 <?php
-	 include('login_header.php'); ?>
+	 include('login_header.php'); ?><br>
+	 <center><h4>You need to be logged in to Add Vendors</h4>
  	<div class="container p-3 middle">
  		<form action="login.php" method="POST">
  			<h2 class="text-center">Login</h2><br>
@@ -104,9 +105,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
  			</div>
  			<br><br>
  			<div class="text-center">
-	 			<button class="btn btn-primary">Login</button>
+	 			<button class="btn btn-primary">Login</button></form>
  			</div>
- 		</form>
+ 		
  		<div class="text-center">
  			<a href="register.php"><button class="btn btn-secondary">Register</button></a>
  		</div><br>
