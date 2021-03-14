@@ -3,12 +3,15 @@
 Colour Coding
 
 Navbar - #F76C6C
-Background - #A8D0E6
+Background - #ffe2e6
 Footer - #f8e9a1
 Footer links hover - #F76C6C
 
 ******************************** */
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+</style>
 
 html{
     scroll-behavior:smooth;
@@ -22,8 +25,9 @@ html{
   body {
     padding-top: 50px;
     margin: 0;
-    background-color: #A8D0E6;
+    background-color: #ffe2e6;
     margin:0;
+    font-family: Helvetica, Sans-Serif;
   }
 
 /* *********** NAVBAR *************  */
@@ -140,7 +144,7 @@ a{
     text-decoration: none;
 }
 .mainHeader{
-    background-color: #A8D0E6;
+    background-color: #ffe2e6;
     height: 250px;
     text-align: center;
     margin-bottom:20px;
@@ -159,11 +163,14 @@ p{
 
 
 .cardElement{
-    background-color:  #A8D0E6;
+    background-color:  #ffe2e6;
     width: 500px;
     margin:auto;
 
 }
+
+/* *********** FOOTER *************  */
+
 
 .site-footer
 {
@@ -334,8 +341,9 @@ p{
   }
 }
 
+/* ************************  */
 
-/* SignUp Functionality */
+/* *********** SignUp Pages *************  */
 
 .middle{
 	width:40%;
@@ -343,3 +351,4 @@ p{
 	border-radius: 15px;
 	margin-top:100px;
 }
+/* ************************  */
