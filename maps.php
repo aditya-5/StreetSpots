@@ -18,8 +18,8 @@
       <div class="mainHeader">
         <h1>Find and support your local street vendors!</h1>
         <h2>Enter your zipcode or current location below to get started.</h2>
-        <img src="https://previews.123rf.com/images/macrovector/macrovector1811/macrovector181100430/112542236-sellers-buyers-street-vendors-retro-style-flat-compositions-set-with-pizza-hot-dog-trucks-isolated-v.jpg" alt="traffic light" width="400" height="400">
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101563.15261867813!2d-120.5414305814075!3d37.29872381403058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80913f84fd1bb699%3A0xed2faa20bc868218!2sMerced%2C%20CA!5e0!3m2!1sen!2sus!4v1615695140532!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>       
+     
       </div>
       <h1>    </h1>
       <h1>    </h1>
