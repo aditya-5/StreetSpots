@@ -36,7 +36,7 @@
             div {text-align: center;}
             </style>
 
-<button type="button">Click Me!</button>
+<button type="button" class="btn btn-primary btn-lg">Display Vendors</button>
 <div>
 <h1>    </h1>
 
