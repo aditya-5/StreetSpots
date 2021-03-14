@@ -1,3 +1,6 @@
+<?php include("header.php")
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +11,6 @@
 
 <body>
 
-  <?php include("header.php")
-   ?>
 
 
 

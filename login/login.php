@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
@@ -81,15 +80,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     mysqli_close($conn);
 
 }
-
  ?>
 
  <!DOCTYPE html>
  <html>
  <head>
- 	<title>
- 		Login
- 	</title>
+ 	<title>Login</title>
  </head>
  <body>
  	<div class="container middle p-3">
