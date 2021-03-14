@@ -19,8 +19,9 @@ if(isset($_SESSION['loggedin'])){
  </head>
 
 <nav class="navbar navbar-expand-lg fixed-top">
-   <a class="navbar-brand brand-title" href="index">StreetSpots</a>
-
+   <a class="navbar-brand" href="index">
+      <img src="./assets/logo1.png" class="hov" width="170" height="50" alt="" class="">
+    </a>
      <ul class="navbar-nav">
        <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
        <li class="nav-item"><a class="nav-link"  href="maps">Vendors</a></li>

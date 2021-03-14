@@ -26,47 +26,53 @@ html{
     margin:0;
   }
 
+/* *********** NAVBAR *************  */
+
   .navbar {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: #F76C6C;
-    color: white;
 }
 
+.navbar .hov{
+  transition: all .2s ease-in-out;
+}
+
+.navbar .hov:hover{
+  transform: scale(1.1);
+}
 
 .navbar a{
   color:white
 }
-.brand-title {
-    font-size: 1.5rem;
-    margin: .5rem;
-}
 
-.navbar-links {
+.navbar-nav {
     height: 100%;
 }
 
-.navbar-links ul {
+.navbar-nav ul {
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-.navbar-links li {
+.navbar-nav li {
     list-style: none;
 }
 
-.navbar-links li a {
+.navbar-nav li a {
     display: block;
     text-decoration: none;
     color: white;
     padding: 1rem;
+    transition: all .2s ease-in-out;
 }
 
-.navbar-links li:hover {
-    background-color: #555;
+.navbar-nav li a:hover {
+    background-color: #374785;
+    transform: scale(1.1)
 }
+
+/* ********************************  */
 
 .toggle-button {
     position: absolute;
@@ -96,25 +102,25 @@ html{
         display: flex;
     }
 
-    .navbar-links {
+    .navbar-nav {
         display: none;
         width: 100%;
     }
 
-    .navbar-links ul {
+    .navbar-nav ul {
         width: 100%;
         flex-direction: column;
     }
 
-    .navbar-links ul li {
+    .navbar-nav ul li {
         text-align: center;
     }
 
-    .navbar-links ul li a {
+    .navbar-nav ul li a {
         padding: .5rem 1rem;
     }
 
-    .navbar-links.active {
+    .navbar-nav.active {
         display: flex;
     }
 
@@ -162,10 +168,11 @@ p{
 .site-footer
 {
   background-color: #374785;
-  padding:45px 0 20px;
+  padding:30px 0 20px;
   font-size:15px;
-  line-height:24px;
+  line-height:65px;
   color: white;
+  padding-bottom:40px
 }
 .site-footer hr
 {
@@ -252,6 +259,7 @@ p{
     text-align:center
   }
 }
+
 .social-icons
 {
   padding-left:0;
@@ -276,7 +284,6 @@ p{
   color:#818a91;
   font-size:22px;
   display:inline-block;
-  line-height:44px;
   width:44px;
   height:44px;
   text-align:center;
@@ -285,16 +292,18 @@ p{
   padding-top:9px;
   -webkit-transition:all .2s linear;
   -o-transition:all .2s linear;
-  transition:all .2s linear
+  transition:all .2s linear;
+  margin:10px
 }
 .social-icons a:active,.social-icons a:focus,.social-icons a:hover
 {
   color:#fff;
-  background-color:#29aafe
+  background-color:#29aafe;
+  transform: scale(1.5);
 }
 .social-icons.size-sm a
 {
-  line-height:34px;
+  line-height:10px;
   height:34px;
   width:34px;
   font-size:14px
