@@ -184,7 +184,8 @@ mysqli_close($conn);
 	<title>Register</title>
 </head>
 <body>
-
+	<?php
+	include('login_header.php'); ?>
 
 	<div class="container p-4 middle">
 		<form action="register.php" method="POST">
@@ -231,4 +232,7 @@ mysqli_close($conn);
 </div>
 
 </body>
+
+<?php
+include('login_footer.php'); ?>
 </html>

@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
@@ -88,6 +89,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
  	<title>Login</title>
  </head>
  <body>
+	 <?php
+	 include('login_header.php'); ?>
  	<div class="container middle p-3">
  		<form action="login.php" method="POST">
  			<h2 class="text-center">Login</h2><br>
@@ -111,4 +114,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
  	</div>
 
  </body>
+
+ <?php
+ include('login_footer.php'); ?>
  </html>
