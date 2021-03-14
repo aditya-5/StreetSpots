@@ -80,10 +80,10 @@ if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']==false){
  	</div>
 
 
-
+<center>
     <h1>   </h1>
-    <h1>FOLLOW COVID-19 CDC GUIDELINES</h1>
-    <h2>Wear a mask and maintain 6 FT from others!</h2>
+    <h1>Please make sure to follow the covid guidelines</h1>
+    <h2>Wear a mask and maintain a good distance from others</h2></center><br>
 
 
 
