@@ -34,9 +34,9 @@
             h1 {text-align: center;}
             p {text-align: center;}
             div {text-align: center;}
-            </style>
 
-<button type="button">Click Me!</button>
+<a href="maps.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Find My StreetSpots!</a>
+
 <div>
 <h1>    </h1>
 
@@ -50,11 +50,16 @@
       p {text-align: center;}
       div {text-align: center;}
       </style>
-
-      <h3>Why support your local street vendors?</h3>
-      <p>
-      </p>
-   <div>
+   
+      <h3>Why Support Your Local Street Vendors?</h3>
+      <p>Street vending enlivens urban public spaces and increases public safety by making streets vibrant and welcoming, Promoting street vending can generate employment, keep people safe and create the vitality and comity that is the hallmark of livable humane cities.
+      </p>   
+         
+    <h1>   </h1>
+    <h1>FOLLOW COVID-19 CDC GUIDELINES</h1>
+    <h2>Wear a mask and maintain 6 FT from others!</h2>
+        
+    <div>
 
 
 
