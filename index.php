@@ -64,7 +64,7 @@
             h1 {text-align: center;}
             p {text-align: center;}
             div {text-align: center;}
-
+         </style>
 <a href="maps.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Find My StreetSpots!</a>
 
 <div>
