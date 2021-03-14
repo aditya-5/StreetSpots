@@ -30,7 +30,7 @@ if(isset($_SESSION['loggedin'])){
            echo "<li class='nav-item'><a class='nav-link' href='./login/logout'>Logout ($fname"." "."$lname)</a></li>";
          }
          else{
-           echo "<li class='nav-item'><a class='nav-link' href='./login/login'>Login</a></li>";
+           echo "<li class='nav-item'><a class='nav-link' href='./login/login'>Login/Register</a></li>";
          }
         ?>
      </ul>
