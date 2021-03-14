@@ -20,7 +20,7 @@ html{
 
 
   body {
-    padding: 0;
+    padding-top: 50px;
     margin: 0;
     background-color: #A8D0E6;
     margin:0;
@@ -28,7 +28,6 @@ html{
 
   .navbar {
     display: flex;
-    position: relative;
     justify-content: space-between;
     align-items: center;
     background-color: #F76C6C;
@@ -275,7 +274,7 @@ p{
 .social-icons a{
   background-color:#eceeef;
   color:#818a91;
-  font-size:16px;
+  font-size:22px;
   display:inline-block;
   line-height:44px;
   width:44px;
@@ -283,6 +282,7 @@ p{
   text-align:center;
   margin-right:8px;
   border-radius:100%;
+  padding-top:9px;
   -webkit-transition:all .2s linear;
   -o-transition:all .2s linear;
   transition:all .2s linear

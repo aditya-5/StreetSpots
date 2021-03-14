@@ -18,7 +18,7 @@ if(isset($_SESSION['loggedin'])){
    <link rel="stylesheet" href="./assets/style.css">
  </head>
 
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg fixed-top">
    <a class="navbar-brand brand-title" href="index">StreetSpots</a>
 
      <ul class="navbar-nav">
