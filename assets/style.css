@@ -1,3 +1,14 @@
+/* ********************************
+
+Colour Coding
+
+Navbar - #F76C6C
+Background - #A8D0E6
+Footer - #f8e9a1
+Footer links hover - #F76C6C
+
+******************************** */
+
 
 html{
     scroll-behavior:smooth;
@@ -11,7 +22,7 @@ html{
   body {
     padding: 0;
     margin: 0;
-    background-color: burlywood;
+    background-color: #A8D0E6;
     margin:0;
   }
 
@@ -20,10 +31,14 @@ html{
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: #F76C6C;
     color: white;
 }
 
+
+.navbar a{
+  color:white
+}
 .brand-title {
     font-size: 1.5rem;
     margin: .5rem;
@@ -120,7 +135,7 @@ a{
     text-decoration: none;
 }
 .mainHeader{
-    background-color: burlywood;
+    background-color: #A8D0E6;
     height: 250px;
     text-align: center;
     margin-bottom:20px;
@@ -139,7 +154,7 @@ p{
 
 
 .cardElement{
-    background-color:  burlywood;
+    background-color:  #A8D0E6;
     width: 500px;
     margin:auto;
 
@@ -147,11 +162,11 @@ p{
 
 .site-footer
 {
-  background-color: burlywood;
+  background-color: #374785;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
-  color:#737373;
+  color: white;
 }
 .site-footer hr
 {
@@ -172,11 +187,12 @@ p{
 }
 .site-footer a
 {
-  color:#737373;
+  color: #f8e9a1;
 }
+
 .site-footer a:hover
 {
-  color:#3366cc;
+  color:#f76c6c;
   text-decoration:none;
 }
 .footer-links
