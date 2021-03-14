@@ -43,6 +43,14 @@
 <section class="home" id="home">
 <!------Card-->
 
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary" type="button">Enter my Zip Code</button>
+    <button class="btn btn-outline-secondary" type="button">Use my Current Location</button>
+  </div>
+  <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+</div>
+
 <div class="cardElement">
 
   <div>
