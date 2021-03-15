@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 $log = false;
 if(isset($_SESSION['loggedin'])){
@@ -27,12 +28,12 @@ if(isset($_SESSION['loggedin'])){
      <ul class="navbar-nav">
        <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
        <li class="nav-item"><a class="nav-link"  href="maps">Vendors</a></li>
-       <?php 
+       <?php
        if($log){
         echo " <li class='nav-item'><a class='nav-link'  href='vendor'>Add Vendor</a></li>";
        }
         ?>
-      
+
 
        <?php
          if($log){
