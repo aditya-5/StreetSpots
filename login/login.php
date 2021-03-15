@@ -90,7 +90,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
  </head>
  <body>
 	 <?php
-	 include('login_header.php'); ?><br>
+	 include('login_header.php'); ?>
+	 <br>
 	 <center><h4>You need to be logged in to Add Vendors</h4>
  	<div class="container p-3 middle">
  		<form action="login.php" method="POST">

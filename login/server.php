@@ -58,6 +58,26 @@ else{
 
 // ******************************************
 
+// First run only - Creating table for storing lats and longs
+// 		$sql = "
+// 		CREATE TABLE VENDORS (
+// 		  vendor_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+// 		  name varchar(255)  NOT NULL,
+// 		  description varchar(255)  NOT NULL,
+// 		  address varchar(255)  NOT NULL,
+// 		  lat FLOAT(50)	NOT NULL,
+// 		  lng FLOAT(50)	NOT NULL,
+// 			vol INT NOT NULL
+// 		)";
+//
+// if(mysqli_query($conn, $sql)){
+// 	echo("Created Table successfully");
+// }
+// else{
+// 	echo("Error creating table : ". mysqli_error($conn));
+// }
+
+
 
 // To close the connection
 // mysqli_close($conn);
