@@ -1,11 +1,7 @@
 <?php
 include("./login/server.php");
-session_start();
+// session_start();
 
-if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']==false){
-	header("location: ./login/login.php");
-	exit();
-};
 
  ?>
 
@@ -83,7 +79,12 @@ if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']==false){
   </head>
   <body>
   	 <?php
-	 include('header.php'); ?>
+	 include('header.php');
+
+	 if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']==false){
+	 	header("location: ./login/login.php");
+	 	exit();
+	 };?>
 
 
 	 <div class="container p-3 middle">
