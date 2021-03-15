@@ -1,6 +1,44 @@
 <?php
 include("./login/server.php");
-// session_start();
+
+$name = $desc = $addr =  '';
+$error = '';
+
+if(isset($_POST['add_vendor'])){
+
+	if(empty($_POST['name'])||empty($_POST['desc'])||empty($_POST['addr'])||empty($_POST['lat'])||empty($_POST['lng'])||empty($_POST['vol'])){
+		$error = "Some of the information is missing";
+	}
+
+
+
+
+	if(empty($error)){
+		$name = trim($_POST['name']);
+		$desc = trim($_POST['desc']);
+		$addr = trim($_POST['addr']);
+		$lat = $_POST['lat']+0;
+		$lng = $_POST['lng']+0;
+		$vol = $_POST['vol']+0;
+		echo $name.$desc.$addr.$lat.$lng.$vol;
+		echo gettype($lat).gettype($lng).gettype($vol).gettype($name).gettype($desc).gettype($addr);
+		$sql = "INSERT INTO VENDORS (name,description,address,lat, lng,vol) VALUES(?, ?, 	?, ?, ?, ?)";
+    // $sql = "INSERT INTO VENDORS (name,description,address,lat, lng,vol) VALUES('sadas', 'asfasfsa', 'asfasf', 131131, 231233, 1)";
+		if($stmt = mysqli_prepare($conn, $sql)){
+      mysqli_stmt_bind_param($stmt, "sssddi", $name, $desc, $addr, $lat, $lng, $vol);
+			if(mysqli_stmt_execute($stmt)){
+				header("location: index.php");
+			}
+			else{
+				echo "Couldn't execute";
+			}
+		}
+		else{
+			echo "Couldn't prepare";
+		}
+	}
+
+}
 
 
  ?>
@@ -14,13 +52,32 @@ include("./login/server.php");
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-		<script async
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9_2222347Z4XE4H6KD4l0wXVU1lTrnbg&callback=initMap">
-</script>
-    <script type="text/javascript">
+<script async
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9_2222347Z4XE4H6KD4l0wXVU1lTrnbg&callback=gett">    </script>
+
+<script type="text/javascript">
+    var user_lat;
+    var user_lon;
+    function gett() {
+            var startPos;
+            var geoSuccess = function(position) {
+              startPos = position;
+              document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+              document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+              user_lon = startPos.coords.longitude;
+              user_lat = startPos.coords.latitude;
+            };
+            navigator.geolocation.getCurrentPosition(geoSuccess);
+            setTimeout(function(){
+              initMap(user_lat,user_lon);
+            }
+            , 4000);
+
+        };
+
+
     	function geocode(lat, lng){
-				console.log(lat);
-				console.log(lng);
+
     		axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
     			params:{
     				latlng:lat+','+lng,
@@ -28,31 +85,40 @@ include("./login/server.php");
     			}
     		}).then(function(response){
     			document.getElementById('addr').value = response.data.results[0].formatted_address;
-					console.log(response);
     		}).catch(function(error){
     			console.log(error);
     		});
     	}
+
+
+
+
 			var markers=[];
-			function initMap() {
+
+
+
+			function initMap(a,b) {
+        if(isNaN(a)||isNaN(b)){
+          a = 53.4668;
+          b = -2.2339;
+        }
 		  const map = new google.maps.Map(document.getElementById("map"), {
-		    zoom: 4,
-		    center: { lat: -25.363882, lng: 131.044922 },
+		    zoom: 12,
+		    center: { lat: parseFloat(a), lng: parseFloat(b) },
 		  });
-
-
 		  listener1 = map.addListener("click", (e) => {
 		    placeMarkerAndPanTo(e.latLng, map);
 		  });
 		}
+
+
+
 
 		function placeMarkerAndPanTo(latLng, map) {
 			if(markers.length>0){
 				setMapOnAll(null);
 				markers = [];
 			}
-			// console.log(markers.length);
-			console.log(markers);
 		  marker = new google.maps.Marker({
 		    position: latLng,
 		    map: map,
@@ -75,7 +141,10 @@ include("./login/server.php");
 	function edit(){
 		document.getElementById("addr").removeAttribute("readonly");
 	}
-    </script>
+
+
+
+</script>
   </head>
   <body>
   	 <?php
@@ -89,15 +158,14 @@ include("./login/server.php");
 
 	 <div class="container p-3 middle">
 
- 		<form action="vendor_form.php" method="POST">
+ 		<form action="vendor.php" method="POST">
 
  			<h2 class="text-center">Add Vendor</h2><br>
-
 			<?php
 			if(!empty($error)){
-				echo "<div class='alert alert-warning' role='alert'>
+				echo "<center><div class='alert alert-warning' role='alert'>
 	  $error
-	</div>";
+	</div></center>";
 			} ?>
 
  			<div class="form-group">
