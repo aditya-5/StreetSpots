@@ -37,6 +37,7 @@ if(isset($_POST['add_vendor'])){
 			if(mysqli_stmt_execute($stmt)){
 				$inserted_id =  mysqli_insert_id($conn);
 				// Image upload
+			
 				if(isset($_FILES['file'])){
 						$filename = $_FILES['file']['name'];
 						$target_dir = "upload/";
@@ -54,7 +55,7 @@ if(isset($_POST['add_vendor'])){
 							move_uploaded_file($_FILES['file']['tmp_name'],$target_file);
 							}
 				}
-				header("location: home");
+				// header("location: home");
 			}
 			else{
 				$error = "Couldn't execute";

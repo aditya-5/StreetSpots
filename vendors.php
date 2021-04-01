@@ -57,17 +57,24 @@ ajax.send();
 ajax.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
     data = JSON.parse(this.responseText);
-
-
     for(var i=0;i<data.length;i++){
               markers.push(new google.maps.Marker({
                 position:{lat:parseFloat(data[i].lat), lng:parseFloat(data[i].lng)},
                 map:map,
                 icon:"",
               }));
+              let ii = i;
+              markers[i].addListener("click",function(){
+                 (function(){
+                   setTimeout(function(){
+                       $('#displayDetails').html('<div class="card" style="width: 32rem;"><img style="width:500px;height:400px;" src="'+data[ii].image+'" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">'+data[ii].name+'</h5><p class="card-text"><i class="fas fa-shopping-cart"></i> '+data[ii].description+'</p><p><i class="fas fa-map-marker-alt"></i> '+data[ii].address+'</p></div><div class="card-footer"><small class="text-muted"> <i class="fas fa-plus-square"></i> '+data[ii].date+'</small></div></div>')
+
+                   },1);
+               })();
+              })
 
                infoWindows.push(new google.maps.InfoWindow({
-                content:"<h5>"+data[i].description+"</h5>"
+                content:"<h5>"+data[i].name+"</h5>"
               }));
               try{throw i}
               catch(ii){
@@ -75,13 +82,7 @@ ajax.onreadystatechange = function(){
                   infoWindows[ii].open(map, markers[ii]);
                 })
               }
-
-
-    }
-
-
-
-
+            }
   }
 }
 
@@ -94,36 +95,26 @@ ajax.onreadystatechange = function(){
 
 
       <div class="mainHeader" >
-    <div class="row justify-content-center" style="padding-top:40px" >
-      <div class="col-lg-8">
-        <div class="alert alert-info" >
-          <h4>The below map shows all the street vendors around you</h4>
+        <br><br><br><br>
+        <div class="row  justify-content-center ">
+          <div class="col pl-5">
+            <center>
+            <div id="map" style="height:400px;width:400px"></div><br><br>
+            <div class="alert alert-info" style="font-size:0.4rem">
+              <h4>The above map shows all the street vendors around you</h4>
+            </div><br>
+            <div class="alert alert-success" style="font-size:0.8rem">
+              <h4>Drag around and click on the markers to view vendors</h4>
+            </div>
+          </center>
+          </div>
+          <div class="col " id="displayDetails">
+          </div>
         </div>
-        </div>
-    </div>
-
-
-     <div class="row justify-content-center" >
-      <div class="col-lg-8">
-        <div class="alert alert-success" >
-          <h4>Drag around the map and click on the vendors to know more about them</h4>
-        </div>
-        </div>
-    </div>
-
-
-
-
-      <div class="row  justify-content-center">
-         <div id="map" style="height:400px;width:400px"></div>
-      </div>
-
-
    <br>
 
 
 
-</section>
 </body>
 
 

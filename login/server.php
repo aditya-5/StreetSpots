@@ -63,6 +63,7 @@ else{
 		//   lng FLOAT(50)	NOT NULL,
 		// 	vol INT NOT NULL
 		// )";
+
 //
 // if(mysqli_query($conn, $sql)){
 // 	echo("Created Table successfully");
@@ -79,6 +80,7 @@ else{
 //   `image_name` varchar(255) NOT NULL,
 //   `image` longtext NOT NULL
 // ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+//  Make sure to add foreign key later on
 
 // To close the connection
 // mysqli_close($conn);

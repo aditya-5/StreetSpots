@@ -13,7 +13,22 @@ while ($row = mysqli_fetch_assoc($result)){
   $data[] = $row;
 }
 
+foreach($data as $key=>$value){
+
+  $sql = "SELECT * from IMAGES where vendor_id = ".$value['vendor_id'];
+  $result = mysqli_query($conn, $sql);
+  while ($row = mysqli_fetch_assoc($result)){
+    $data[$key]['image'] = $row['image'];
+    // $data[$key]['image_name'] = $row['image_name'];
+    // $data[$key]['image_id'] = $row['image_id'];
+
+  }
+}
+
+
 echo json_encode($data);
+// echo $data;
+
 
 
 
