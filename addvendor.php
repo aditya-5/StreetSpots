@@ -1,10 +1,16 @@
 <?php
 include("./login/server.php");
-session_start();
+
+if (session_status() != PHP_SESSION_ACTIVE) {
+  session_start();
+}
+
 if(!isset($_SESSION['loggedin']) ){
 	header("location: error.php");
 	exit();
 }
+
+
 
 $name = $desc = $addr =  '';
 $error = '';
@@ -32,7 +38,7 @@ if(isset($_POST['add_vendor'])){
 		if($stmt = mysqli_prepare($conn, $sql)){
       mysqli_stmt_bind_param($stmt, "sssddi", $name, $desc, $addr, $lat, $lng, $vol);
 			if(mysqli_stmt_execute($stmt)){
-				header("location: index.php");
+				header("location: home");
 			}
 			else{
 				echo "Couldn't execute";
@@ -163,7 +169,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9_2222347Z4XE4H6KD4l0wXV
 
 	 <div class="container p-3 middle">
 
- 		<form action="vendor.php" method="POST">
+ 		<form action="addvendor.php" method="POST">
 
  			<h2 class="text-center">Add Vendor</h2><br>
 			<?php
