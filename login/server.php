@@ -1,10 +1,4 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
-<link rel="stylesheet" href="style.css">
-
 <?php
-
-
 // For local database only
 define("DB_SERVER",'localhost');
 define("DB_USERNAME", 'root');
@@ -23,7 +17,7 @@ if($conn === false){
 	die("ERROR: COULDN'T CONNECT TO DATABASE " .  mysqli_connect_error());
 }
 else{
-	echo("Connected Successfully<br>");
+	$msgg = "Connected Successfully";
 }
 
 // First run only - Creating database

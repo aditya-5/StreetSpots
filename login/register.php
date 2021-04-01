@@ -1,6 +1,3 @@
-
-
-
 <?php
 require("server.php");
 session_start();
@@ -186,7 +183,6 @@ mysqli_close($conn);
 <body>
 	<?php
 	include('login_header.php'); ?>
-
 	<div class="container p-4 middle">
 		<form action="register.php" method="POST">
 		<h2 class="text-center">Register</h2><br>

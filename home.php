@@ -22,16 +22,16 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="./assets/img/1.png" class="d-block w-100" alt="...">
+        <img src="./assets/img/slide/1.png" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="./assets/img/2.png" class="d-block w-100" alt="...">
+        <img src="./assets/img/slide/2.png" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="./assets/img/3.png" class="d-block w-100" alt="...">
+        <img src="./assets/img/slide/3.png" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="./assets/img/4.png" class="d-block w-100" alt="...">
+        <img src="./assets/img/slide/4.png" class="d-block w-100" alt="...">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -58,7 +58,7 @@
    <div class="jumbotron" style="margin-bottom:0px">
   <h1 class="display-4">What is StreetSpots?</h1>
   <p class="lead">StreetSpots aims at promoting social good by supporting the local street vendors around us. It allows you to add information about a street vendor you spotted, view information about that vendor. It uses interactive maps provided by Google Maps API to provide a vibrant user experience. </p>
-  
+
   <a class="btn btn-primary btn-lg" href="./maps" role="button">Look for vendors around you</a>
 </div>
 
@@ -69,7 +69,7 @@
 </div>
  <div class="jumbotron " style="margin-top:0px; margin-bottom:0px">
   <h1 class="display-4">How to add street vendors?</h1>
-  <p class="lead">It couldn't be more simple. Just <a href="./login/login">Login/Register</a> and go to <a href="vendor">Add Vendors</a> page. Fill in the form and wait for the approval.  </p>
+  <p class="lead">It couldn't be more simple. Just <a href="./login/login">Login/Register</a> and go to <a href="./vendor">Add Vendors</a> page. Fill in the form and wait for the approval.  </p>
 </div>
 
 <div class="jumbotron " style="margin-top:0px; margin-bottom:0px;background-color:#ffe2e6">
@@ -88,8 +88,8 @@
 
   </ul>
   </p>
-  
-  
+
+
 
 </div>
 

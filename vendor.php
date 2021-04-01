@@ -1,6 +1,12 @@
 <?php
 include("./login/server.php");
 
+session_start();
+if(!isset($_SESSION['loggedin']) ){
+	header("location: ../home.php");
+	exit();
+}
+
 $name = $desc = $addr =  '';
 $error = '';
 
