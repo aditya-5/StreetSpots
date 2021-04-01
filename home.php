@@ -56,7 +56,7 @@
 
        <div class="jumbotron " style="margin-top:0px; margin-bottom:0px">
         <h1 class="display-4">How to add street vendors?</h1>
-        <p class="lead">It couldn't be more simple. Just <a href="./login/login">Login/Register</a> and go to <a href="./vendor">Add Vendors</a> page. Fill in the form and wait for the approval.  </p>
+        <p class="lead">It couldn't be more simple. Just <a href="./login/login">Login/Register</a> and go to <a href="./addvendor">Add Vendors</a> page. Fill in the form and wait for the approval.  </p>
       </div>
 
       <div class="jumbotron " style="margin-top:0px; margin-bottom:0px;background-color:#ffe2e6">

@@ -26,10 +26,10 @@ if(isset($_SESSION['loggedin'])){
     </a>
      <ul class="navbar-nav">
        <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
-       <li class="nav-item"><a class="nav-link"  href="maps">Vendors</a></li>
+       <li class="nav-item"><a class="nav-link"  href="vendors">Vendors</a></li>
        <?php
        if($log){
-        echo " <li class='nav-item'><a class='nav-link'  href='vendor'>Add Vendor</a></li>";
+        echo " <li class='nav-item'><a class='nav-link'  href='addvendor'>Add Vendor</a></li>";
        }
         ?>
        <?php

@@ -56,8 +56,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 							$_SESSION['first_name'] = $firstn;
 							$_SESSION['last_name'] = $lastn;
 							$_SESSION['email'] = $email;
-							// header("location: welcome.php");
-							header("location: ../index.php");
+							header("location: ../home");
 						}
 						else{
 							echo "Oops. The password is incorrect";
@@ -90,9 +89,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
  <body>
 	 <?php
 	 include('login_header.php'); ?>
-	 <br>
-	 <center><h4>You need to be logged in to add Vendors</h4>
- 	<div class="container p-3 middle">
+	 <br><br><br>
+	 <center><h2 class="errorHeading">You need to be logged in to add vendors</h2>
+ 	<div class="container p-3 mt-3 middle">
  		<form action="login.php" method="POST">
  			<h2 class="text-center">Login</h2><br>
  			<div class="form-group">
@@ -111,9 +110,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
  		<div class="text-center">
  			<a href="register.php"><button class="btn btn-secondary">Register</button></a>
  		</div><br>
-
  	</div>
-
  </body>
 
  <?php
