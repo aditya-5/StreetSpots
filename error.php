@@ -4,7 +4,7 @@ include("header.php");
  <body id="errorPage">
   <center><h2 class="errorHeading">REDIRECTING IN <span id="timer">5</span></h2></center>
    <div class="container d-flex justify-content-center mt-0">
-     <img src="./assets/error.png" class="errorImg" alt="">
+     <img src="./assets/img/error.png" class="errorImg" alt="">
    </div>
    <?php include("footer.php")?>
 
