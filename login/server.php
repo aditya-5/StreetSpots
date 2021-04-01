@@ -54,15 +54,15 @@ else{
 
 // First run only - Creating table for storing lats and longs
 // 		$sql = "
-// 		CREATE TABLE VENDORS (
-// 		  vendor_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-// 		  name varchar(255)  NOT NULL,
-// 		  description varchar(255)  NOT NULL,
-// 		  address varchar(255)  NOT NULL,
-// 		  lat FLOAT(50)	NOT NULL,
-// 		  lng FLOAT(50)	NOT NULL,
-// 			vol INT NOT NULL
-// 		)";
+		// CREATE TABLE VENDORS (
+		//   vendor_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+		//   name varchar(255)  NOT NULL,
+		//   description varchar(255)  NOT NULL,
+		//   address varchar(255)  NOT NULL,
+		//   lat FLOAT(50)	NOT NULL,
+		//   lng FLOAT(50)	NOT NULL,
+		// 	vol INT NOT NULL
+		// )";
 //
 // if(mysqli_query($conn, $sql)){
 // 	echo("Created Table successfully");
@@ -72,6 +72,13 @@ else{
 // }
 
 
+// images tables
+// CREATE TABLE `IMAGES` (
+//   `image_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+//   `vendor_id` int(11) NOT NULL,
+//   `image_name` varchar(255) NOT NULL,
+//   `image` longtext NOT NULL
+// ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 // To close the connection
 // mysqli_close($conn);

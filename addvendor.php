@@ -10,7 +10,10 @@ if(!isset($_SESSION['loggedin']) ){
 	exit();
 }
 
-
+// if($_SESSION['error']){
+// 	$err = $_SESSION['error'];
+// 	unset($_SESSION['error']);
+// }
 
 $name = $desc = $addr =  '';
 $error = '';
@@ -21,9 +24,6 @@ if(isset($_POST['add_vendor'])){
 		$error = "Some of the information is missing";
 	}
 
-
-
-
 	if(empty($error)){
 		$name = trim($_POST['name']);
 		$desc = trim($_POST['desc']);
@@ -31,24 +31,39 @@ if(isset($_POST['add_vendor'])){
 		$lat = $_POST['lat']+0;
 		$lng = $_POST['lng']+0;
 		$vol = $_POST['vol']+0;
-		echo $name.$desc.$addr.$lat.$lng.$vol;
-		echo gettype($lat).gettype($lng).gettype($vol).gettype($name).gettype($desc).gettype($addr);
 		$sql = "INSERT INTO VENDORS (name,description,address,lat, lng,vol) VALUES(?, ?, 	?, ?, ?, ?)";
-    // $sql = "INSERT INTO VENDORS (name,description,address,lat, lng,vol) VALUES('sadas', 'asfasfsa', 'asfasf', 131131, 231233, 1)";
 		if($stmt = mysqli_prepare($conn, $sql)){
       mysqli_stmt_bind_param($stmt, "sssddi", $name, $desc, $addr, $lat, $lng, $vol);
 			if(mysqli_stmt_execute($stmt)){
+				$inserted_id =  mysqli_insert_id($conn);
+				// Image upload
+				if(isset($_FILES['file'])){
+						$filename = $_FILES['file']['name'];
+						$target_dir = "upload/";
+						if($filename != ''){
+							$target_file = $target_dir . basename($_FILES["file"]["name"]);
+						}
+						$extension = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+						$extensions_arr = array("jpg","jpeg","png","gif");
+						if( in_array($extension,$extensions_arr) ){
+							$image_base64 = base64_encode(file_get_contents($_FILES['file']['tmp_name']) );
+							$image = 'data::image/'.$extension.';base64,'.$image_base64;
+
+							$query = "insert into IMAGES(vendor_id,image_name, image) values($inserted_id,'".$filename."','".$image."')";
+							mysqli_query($conn,$query);
+							move_uploaded_file($_FILES['file']['tmp_name'],$target_file);
+							}
+				}
 				header("location: home");
 			}
 			else{
-				echo "Couldn't execute";
+				$error = "Couldn't execute";
 			}
 		}
 		else{
-			echo "Couldn't prepare";
+			$error =  "Couldn't prepare";
 		}
 	}
-
 }
 
 
@@ -169,7 +184,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9_2222347Z4XE4H6KD4l0wXV
 
 	 <div class="container p-3 middle">
 
- 		<form action="addvendor.php" method="POST">
+ 		<form action="addvendor.php" method="POST" enctype="multipart/form-data">
 
  			<h2 class="text-center">Add Vendor</h2><br>
 			<?php
@@ -254,9 +269,9 @@ A volatile vendor is one which keeps changing locations</center>
 </div>
 </div>
 </div>
-
-
-
+<div class="row d-flex justify-content-center">
+	<input type="file" name="file">
+</div>
  			<br>
  			<div class="text-center">
 	 			<button class="btn btn-primary" name="add_vendor" type="submit">Add</button>

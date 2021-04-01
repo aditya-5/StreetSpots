@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() != PHP_SESSION_ACTIVE) {
+  session_start();
+}
 $log = false;
 if(isset($_SESSION['loggedin'])){
   if($_SESSION['loggedin']==true){
