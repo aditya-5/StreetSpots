@@ -1,11 +1,10 @@
 /* ********************************
-
 Colour Coding
-
-Navbar - #F76C6C
-Background - #ffe2e6
-Footer - #f8e9a1
-Footer links hover - #F76C6C
+Navbar - #F76C6C (dark pink)
+Background - #ffe2e6 (pink)
+Footer -  #374885 (blue)
+Footer links -  #f8e9a1 (yellow)
+Footer links hover - #F76C6C (dark pink)
 
 ******************************** */
 
@@ -26,22 +25,18 @@ html{
 }
 
 
-  body {
-    padding-top: 50px;
-    margin: 0;
-    background-color: #ffe2e6;
-    margin:0;
-    font-family: Helvetica, Sans-Serif;
-  }
-
-
-/* *********** Vendor Form *************  */
-
+body {
+  padding-top: 100px;
+  margin: 0;
+  background-color: #ffe2e6;
+  margin:0;
+  font-family: Helvetica, Sans-Serif;
+}
 
 
 /* *********** NAVBAR *************  */
 
-  .navbar {
+.navbar {
     justify-content: space-between;
     background-color: #F76C6C;
 }
@@ -350,9 +345,9 @@ p{
   }
 }
 
-/* ************************  */
-
+/* **************************************  */
 /* *********** SignUp Pages *************  */
+/* **************************************  */
 
 .middle{
 	width:40%;
@@ -361,4 +356,17 @@ p{
 	margin-top:100px;
   margin-bottom:70px;
 }
-/* ************************  */
+
+/* **************************************  */
+/* *********** Error Page *************  */
+/* **************************************  */
+
+.errorImg{
+  border:none;
+
+}
+
+#errorPage{
+  font-family: Helvetica, Sans-Serif;
+  color:#374885
+}
