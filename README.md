@@ -2,7 +2,7 @@
 *****************  StreetSpots Team *****************<br />
 
 Jorge - University of California Merced<br />
-Aditya - University of Manchester<br />
+Aditya - University of Manchester, England, UK<br />
 Javier - University of California Merced<br />
 
 Copyright © 2021 All Rights Reserved by the Developers.<br />
