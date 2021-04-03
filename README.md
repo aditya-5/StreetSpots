@@ -21,4 +21,4 @@ PHP (Backend)<br />
 HTML+CSS+BootStrap+JavaScript+jQuery (FrontEnd)<br />
 mySQL (Database)<br />
 Google Maps API and HTML Geocoding API (APIs)<br />
-FontAwesome icons<br />
+FontAwesome icons<br/>
