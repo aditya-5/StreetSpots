@@ -1,0 +1,29 @@
+# Run Php without filename extension
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+# Return 404 if original request is .php
+#RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+#RewriteRule .* - [L,R=404]
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^([\W\w\.]+)$ ./error.php?short=$1
+
+# Only for local
+#ErrorDocument 400 /StreetSpots/error.php
+#ErrorDocument 401 /StreetSpots/error.php
+#ErrorDocument 403 /StreetSpots/error.php
+#ErrorDocument 404 /StreetSpots/error.php
+#ErrorDocument 500 /StreetSpots/error.php
+
+# For server
+ErrorDocument 400 /error.php
+ErrorDocument 401 /error.php
+ErrorDocument 403 /error.php
+ErrorDocument 404 /error.php
+ErrorDocument 500 /error.php
